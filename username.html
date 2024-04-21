@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 9</title>
+</head> 
+
+<body>
+    <input type="text" id="input1" />
+        <button id="btnbtn" onclick="dropdown()">Click</button>
+
+    <select onclick="dropbtn()" id="display"></select>
+    <div id="form"></div> 
+    <script>
+        function dropdown() {
+            var a = document.getElementById("input1").value
+            for (i = 1; i <= a; i++) {
+                document.getElementById("display").innerHTML += "<option>" + i + "</option>"
+            }
+        }
+
+        function dropbtn() {
+            let a = document.getElementById("display").value
+            form.innerHTML=" "
+            for (i = 1; i <= a; i++) {
+                form.innerHTML +=  
+                `<form><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br></br>
+      </form>`
+    ;
+            }
+
+        }
+        
+    </script>
+
+</body>
+</html>

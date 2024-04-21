@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: black;
+        }
+        img
+        {
+            display: block;
+            margin: auto;
+            border: auto;
+        }
+        .stylin{
+            padding-left:700px;
+            margin: auto;
+            border: auto;
+        }
+       
+        .buttonOffdef{
+    padding: 8px 16px;
+    background-color: rgb(185, 185, 185);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    /* background-color:red;  */
+
+   
+}
+.buttonOn{
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background-color:green;
+
+}
+
+
+.buttonOn:hover{
+    padding: 8px 16px;
+    background-color:rgb(2, 99, 2);
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.buttonOffdef:hover{
+    padding: 8px 16px;
+    /* background-color: rgb(212, 212, 212); */
+    border-radius: 8px;
+    margin-bottom: 16px;
+
+}
+.board{
+    background-color: grey;
+    border-radius: 1rem;
+    color: white;
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 80%; 
+    padding-top: 16px;
+}
+.board h3{
+    padding: 10px;
+}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+            <img class="lightPos" id="bulb1"/>
+            <img class="pos" id="img1" />
+
+
+    <!-- <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png" alt="bulb" height="500vh" width="500vw">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" alt="cat1" height="500vh" width="500vw">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" alt="blb1" height="500vh" width="500vw">-->
+    <div class="board">
+         <h3 id="text"></h3> 
+
+    <div>
+        <input type="button" class="buttonOffdef " value="OFF" onclick="func1()">
+        <input type="button" class="buttonOn" value="ON" onclick="func2()">
+    </div>
+</div>
+
+<script>
+    function func1(){
+        document.body.style.backgroundColor = "black";
+    let a=document.getElementById("img1");
+   a.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png"
+    let b=document.getElementById("bulb1");
+    b.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png"
+    document.getElementById("text").innerHTML="Switched OFF";
+
+}
+function func2(){
+    document.body.style.backgroundColor = "black";
+    let a=document.getElementById("img1");
+    a.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png"
+    let b=document.getElementById("bulb1");
+    b.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"
+    document.getElementById("text").innerHTML="Switched ON";
+}
+
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
